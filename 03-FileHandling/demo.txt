@@ -1,4 +1,1 @@
-demo for the file handling 
-with some more lines to read
-and some more lines to read
-thats it now close the file
+file handling is tricky, but you can do some fun stuff too. ):

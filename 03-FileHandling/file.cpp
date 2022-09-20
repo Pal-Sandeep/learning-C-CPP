@@ -10,7 +10,7 @@ using namespace std;
 int main(){
     ofstream myfile("demo.txt");    // creating a file named demo.txt and opening it
 
-    myfile<<"file handling is tricky, but you can do some fun stuff too.";  //writing to the myfile.txt
+    myfile<<"file handling is tricky, but you can do some fun stuff too. ):";  //writing to the myfile.txt
     
     myfile.close();     //closing the file
 
