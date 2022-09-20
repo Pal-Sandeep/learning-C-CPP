@@ -1,8 +1,8 @@
-#include <iostream>
+#include <iostream>     //preprocessor directive
 
-using namespace std;
+using namespace std;    
 
-int main(){
+int main(){             //main function
     string name;
     cout<<"Please enter your Name: ";
     cin>>name;
