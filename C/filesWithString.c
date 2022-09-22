@@ -10,11 +10,11 @@ int main(){
     char rline[1000];
     int count=0;
     
-    FILE *fptr;
-    fptr = (fopen("str.txt", "r+"));
+    FILE *fpointer;
+    fpointer = (fopen("help.txt", "r+"));
     printf("content of the file before the reversing: \n");
     while(1){
-        ch = fgetc(fptr);              //READING CHARACTER FROM FILE  
+        ch = fgetc(fpointer);              //READING CHARACTER FROM FILE  
         line[i]=ch;
         i++;
         printf("%d\n",i);
@@ -23,7 +23,7 @@ int main(){
         }
         printf("%c",ch);
     }   
-    
+    count=0;
     while(line[count]!='\0'){
         count++;
     }
@@ -51,7 +51,7 @@ int main(){
     rline[i]='\0';
     printf("Spaces, Newline and EOF in File: %d.\n",space);
     printf("\nLine after reverse:\n%s",rline);
-    fprintf(fptr,"%s",rline);
-    fclose(fptr);
+    fprintf(fpointer,"%s",rline);
+    fclose(fpointer);
     return 0;
 }
