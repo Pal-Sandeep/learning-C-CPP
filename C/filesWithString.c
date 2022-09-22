@@ -17,14 +17,14 @@ int main(){
         ch = fgetc(fpointer);              //READING CHARACTER FROM FILE  
         line[i]=ch;
         i++;
-        printf("%d\n",i);
+
         if (ch == EOF){
             break;
         }
         printf("%c",ch);
     }   
     count=0;
-    while(line[count]!='\0'){
+    while(line[count]!=EOF){
         count++;
     }
 
@@ -33,7 +33,7 @@ int main(){
     int w,w1=0,last;
     int len=count-1;
     int space=0,c=0;
-    printf("You enter this line %s\n",line);
+    // printf("You enter this line %s\n",line);
     printf("length of string is : %d\n",count);
     while(i<=count){
         if((line[i]==' ') || (line[i]=='\0')||(line[i]=='\n')){
@@ -51,6 +51,7 @@ int main(){
     rline[i]='\0';
     printf("Spaces, Newline and EOF in File: %d.\n",space);
     printf("\nLine after reverse:\n%s",rline);
+    fseek(fpointer,0,SEEK_SET);
     fprintf(fpointer,"%s",rline);
     fclose(fpointer);
     return 0;
