@@ -1,11 +1,9 @@
 #include <stdio.h>
 
-int main(){
-    int n;
+int palindrome(int n){
+    
     int sum=0;
     int remain;
-    printf("Enter a number to check its palindrome or not: ");
-    scanf("%d",&n);
     int x = n;
     while(x>0){
         remain = x%10;
@@ -13,9 +11,9 @@ int main(){
         x/=10;
     }
     if (n==sum){
-        printf("%d is a paindrome number!",n);
+        printf("%d is a paindrome number!\n",n);
     } else {
-        printf("%d is not a palindrome number!",n);
+        printf("%d is not a palindrome number!\n",n);
     }
     
     return 0;

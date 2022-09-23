@@ -1,20 +1,20 @@
 // reverse the given number
 #include <stdio.h>
 
-int main(){
-    int x;
+int numberReverse(int n){
+
     int sum=0;
     int remain;
     
-    printf("Enter a number to reverse: ");
-    scanf("%d",&x);
+    // printf("Enter a number to reverse: ");
+    // scanf("%d",&n);
 
-    while(x>0){
-        remain = x%10;
+    while(n>0){
+        remain = n%10;
         sum =sum*10+remain;
-        x/=10;
+        n/=10;
     }
-    printf("reverse of given number is %d",sum);
+    printf("\nreverse of given number is %d",sum);
     
     return 0;
 }
