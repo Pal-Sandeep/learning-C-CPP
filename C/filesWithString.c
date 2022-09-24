@@ -32,8 +32,7 @@ int main(){
     i = 0;
     int w,w1=0,last;
     int len=count-1;
-    int space=0,c=0;
-    // printf("You enter this line %s\n",line);
+    int space=0;
     printf("length of string is : %d\n",count);
     while(i<=count){
         if((line[i]==' ') || (line[i]=='\0')||(line[i]=='\n')){
