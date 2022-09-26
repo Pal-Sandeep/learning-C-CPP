@@ -22,6 +22,11 @@ int main(){
     
         if((len==0)||(len==2)||(len==3)||(len==5)||(len==7)||(len==9)){
                 // printf("length is: %d\n",len);
+                if(amount[step]=='0'){
+                    len-=1;
+                    step+=1;    
+                    continue;
+                }
                 if(amount[step]=='1'){
                     printf("One");
                 }else if(amount[step]=='2'){
@@ -40,9 +45,11 @@ int main(){
                     printf(" Eight ");
                 }else if (amount[step]=='9'){
                     printf(" Nine ");
-                }step++;
+                }
                 unit(len);
-                len--;
+                len-=1;
+                step+=1;
+                printf("\nstep inside first if : %d\n",step);
             
         }else if ((len==1)||(len==4)||(len==6)||(len==8))
         {
@@ -52,7 +59,7 @@ int main(){
             check[2]='\0';
             // printf("check[2] is: %s\n",check);
             int ten = atoi(check);
-            // printf("ten is: %d\n",ten);
+            printf("step inside second if: %d\n",step);
             tenth(ten,len,&len,&step);      
         }
     }
@@ -79,7 +86,15 @@ void unit(int x){
 
 void tenth(int x,int len,int *length,int *step){
     // printf("x is: %d\nlength is: %d\nstep is: %d\n",x,*length,*step);
-    if ((x>9)&&(x<20)){
+    // printf("x is %d",x);
+    if ((x<10)){
+        printf("length before tenth :%d\n",*length);
+        printf("step before tenth : %d\n",*step);
+        *length-=1;
+        *step+=1;
+        printf("after tenth\nstep: %d,\n length: %d\n",*step,*length);
+    }
+    else if ((x>9)&&(x<20)){
                 if(x==10){
                     printf(" Ten ");
                 }else if(x==11){
@@ -128,6 +143,7 @@ void tenth(int x,int len,int *length,int *step){
         *step+=2;
     }
     else{
+            if((x>20)||(x<100)){
             if ((x>20)&&(x<30)){
             printf(" Twenty ");
 
@@ -153,7 +169,8 @@ void tenth(int x,int len,int *length,int *step){
             else if ((x>90)&&(x<100)){
                 printf(" Ninety ");        
             }
-        *length-=2;
-        *step+=2;
+            *length-=1;
+            *step+=1;
+            }
     }
 };
