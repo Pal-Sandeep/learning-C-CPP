@@ -3,8 +3,7 @@
 int factors(int n){
     int x=2;
     int flag=0;
-    // printf("Enter a number to find its factors: ");
-    // scanf("%d",&n);
+    
     printf("\nFactors of given Number %d: ",n);
     while(x<=n/2){
         if(n%x==0){
