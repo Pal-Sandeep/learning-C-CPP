@@ -2,7 +2,7 @@
 using namespace std;
 int factorial(int x){
     if (x>0){
-        return x*factorial(x-1);   //using recursion for finding the factorial
+        return x * factorial(x-1);   //using recursion for finding the factorial
     }else {
         return 1;
     }
